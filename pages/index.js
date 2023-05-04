@@ -41,7 +41,7 @@ const callGenerateEndpoint = async () => {
       <div className="container">
         <div className="header">
           <div className="header-title">
-            <h1>Smart Travel, Smart Safety</h1>
+            <h1>Travel like Local. Stay like Local.</h1>
           </div>
           <div className="header-subtitle">
             <h2>Enjoy stress-free travel with AI-powered safety information</h2>
@@ -77,7 +77,7 @@ const callGenerateEndpoint = async () => {
       
       <div className="badge-container grow">
         <a
-          href="https://buildspace.so/builds/ai-writer"
+          href="https://yoozhoo.com"
           target="_blank"
           rel="noreferrer"
         >
