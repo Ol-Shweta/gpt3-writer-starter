@@ -7,8 +7,9 @@ import yoozhooLogo from '../assets/logo.png';
 
 const Home = () => {
   const [userInput, setUserInput] = useState('');
-  const [apiOutput, setApiOutput] = useState('')
-const [isGenerating, setIsGenerating] = useState(false)
+  const [apiOutput, setApiOutput] = useState('');
+  const [text, setText] = useState('');
+const [isGenerating, setIsGenerating] = useState(false);
 
 const callGenerateEndpoint = async () => {
   setIsGenerating(true);
@@ -27,6 +28,9 @@ const callGenerateEndpoint = async () => {
   console.log("OpenAI replied...", output.text)
 
   setApiOutput(`${output.text}`);
+  setText(`${output.text}`);
+  console.log("Text Speech...", setText);
+  
   setIsGenerating(false);
 }
   const onUserChangedText = (event) => {
@@ -59,7 +63,18 @@ const callGenerateEndpoint = async () => {
     {isGenerating ? <span className="loader"></span> : <p>Generate</p>}
     </div>
   </a>
+
+  <div><button className="generate-button" onClick={() => {  
+let msg = {text}.text;
+let utterance = new SpeechSynthesisUtterance(msg);
+let voicesArray = speechSynthesis.getVoices();
+utterance.voice = voicesArray[2];
+speechSynthesis.speak(utterance);
+ }}>Speak </button></div>
+
 </div>
+
+
   
     {apiOutput && (
   <div className="output">
@@ -68,8 +83,8 @@ const callGenerateEndpoint = async () => {
         <h3>Output</h3>
       </div>
     </div> */}
-    <div className="output-content">
-      <p>{apiOutput}</p>
+    <div className="prompt-container">
+      <p className="prompt-box">{apiOutput}</p>
     </div>
   </div>
 )}

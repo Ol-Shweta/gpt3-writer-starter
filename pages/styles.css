@@ -32,7 +32,7 @@ body {
     padding: 50px;
     position: relative;
     width: auto;
-    gap: 64px;
+    gap: 34px;
 }
 
 .header {    
@@ -172,6 +172,8 @@ textarea {
     place-content: flex-start;
     align-items: flex-start;
     background-color:#29602d;
+    color:#FFF;
+    font-size: 16px;
     border-radius: 100px;
     display: flex;
     flex: 0 0 auto;
