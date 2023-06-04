@@ -5,7 +5,6 @@ body {
     padding: 0;
     font-family: 'Manrope', sans-serif;
 }
-
 .root {
     display: flex;
     place-content: center flex-start;
